@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar{
+  height: 70px;
+  display: flex;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1)
+}
+
+.navbar img {
+  align-self: center;
+  margin:30px;
+  margin: 20px 20px 20px 30px;
+}
