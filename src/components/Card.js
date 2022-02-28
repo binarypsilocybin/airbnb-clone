@@ -1,23 +1,17 @@
-import React from "react";
-import Img from "../images/image-katie.png";
-import Star from "../images/star.png"
+import React from "react"
 
-
-export default function Card(){
-    return(
+export default function Card(props) {
+    return (
         <div className="card">
-            <img src={Img} className="card--image" alt=""/>
-            <span className="card--badge">SOLD OUT</span>
+            <img src={require(`../images/${props.img}`)} className="card--image" alt="" />
             <div className="card--stats">
-                <img src={Star} className="card--star" alt=""/>
-                <span>5.0</span>
-                <span className="gray">(6) • </span>
-                <span className="gray">USA</span>
+                <img src={require(`../images/star.png`)} className="card--star" alt="" />
+                <span>{props.rating}</span>
+                <span className="gray">({props.reviewCount}) • </span>
+                <span className="gray">{props.country}</span>
             </div>
-            <p>Life lessons with Katie Zaferes</p>
-            <p><span className="bold">From $136 </span>/ person</p>
+            <p>{props.title}</p>
+            <p><span className="bold">From ${props.price}</span> / person</p>
         </div>
-        
-
     )
 }
